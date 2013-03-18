@@ -5,7 +5,6 @@ from solvemedia.widgets import SolveMediaCaptcha
 import sys
 
 class SolveMediaCaptchaField(forms.CharField):
-    # allowAlreadyChecked: don't raise an error if the captcha has already been checked
     def __init__(self, *args, **kwargs):
         super(SolveMediaCaptchaField, self).__init__(*args, **kwargs)
         if 'label' not in kwargs:
