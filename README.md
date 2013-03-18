@@ -6,7 +6,7 @@ Django integration for Solve Media CAPTCHA/Type-in ads
 
 ## Installation
 1. Put the `solvemedia` directory in a convenient location in your Django path.
-2. Add 'solvemedia` to your Django's `INSTALLED APPS` list in `settings.py`.
+2. Add `solvemedia` to your Django's `INSTALLED_APPS` list in `settings.py`.
 3. Define the Solve Media API keys in `settings.py` as follows:
     * `SM_CKEY = "<YOUR CHALLENGE KEY>"`
     * `SM_VKEY = "<YOUR VERIFICATION KEY>"`
