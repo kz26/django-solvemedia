@@ -25,7 +25,7 @@ class SolveMediaCaptchaField(forms.CharField):
     def clean(self, val):
         super(SolveMediaCaptchaField, self).clean(val['response'])
         sm = SolveMedia(settings.SM_CKEY, settings.SM_VKEY, settings.SM_HKEY)
-        result = sm.check_answer(self.__getRequestIP(), val['challenge'], val['response'])
+        result = sm.check_answer(self.__getRequestIP(), val['challenge'].encode('utf-8'), val['response'].encode('utf-8'))
         if not result['is_valid']:
             raise forms.ValidationError("Error: " + result['error'].capitalize())
         return val['response']
